@@ -1,0 +1,178 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 6,
+  "margin-top": 8,
+  "margin-left": 12,
+  "margin-right": 12,
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "mpris",
+    "clock",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "tray",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "battery",
+    "custom/notification",
+    "custom/power"
+  ],
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/launcher-menu.sh"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "ᗧ",
+      "default": "ᗣ",
+      "urgent": "ᗤ",
+      "persistent": "ᗣ"
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "hyprland/window": {
+    "format": "{class}",
+    "max-length": 35,
+    "rewrite": {
+      "^(?!.*\\S).*": "Escritorio"
+    }
+  },
+  "clock": {
+    "format": "{:%d/%m  ·  %H:%M}",
+    "tooltip-format": "<big><b>{0:%d/%m/%Y  ·  %H:%M}</b></big>\n<small>{0:%A   ·   semana %V}</small>\n\n<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "format": {
+        "months":   "<b>{}</b>",
+        "weekdays": "<b>{}</b>",
+        "today":    "<b><span color='#5ac8fa'>{}</span></b>"
+      }
+    }
+  },
+  "mpris": {
+    "format": "{player_icon}  {dynamic}",
+    "format-paused": "{status_icon}  {dynamic}",
+    "tooltip-format": "<b>{title}</b>\n{artist}\n<small>{album}  ·  {player}</small>",
+    "tooltip-format-paused": "<b>{title}</b>\n{artist}\n<small>{album}  ·  {player} (pausado)</small>",
+    "max-length": 28,
+    "player-icons": {
+      "default": "",
+      "spotify": "",
+      "firefox": ""
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "dynamic-order": [
+      "title",
+      "artist"
+    ],
+    "ignored-players": [
+      "firefox"
+    ]
+  },
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json",
+    "interval": 180,
+    "signal": 8,
+    "format": "{}",
+    "tooltip": true
+  },
+  "custom/launchpad": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format-wifi": "<b>{essid}</b>  ·  {signalStrength}%\nIP\t{ipaddr}\nGateway\t{gwaddr}\n↓ {bandwidthDownBytes}\t↑ {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "<b>{ifname}</b>  ·  Cableado\nIP\t{ipaddr}\nGateway\t{gwaddr}\n↓ {bandwidthDownBytes}\t↑ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Desconectado",
+    "on-click": "nm-connection-editor",
+    "interval": 2
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "on-click": "~/.config/waybar/scripts/battery-menu.sh",
+    "tooltip": true
+  },
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "tooltip": true,
+    "interval": 2,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+  "memory": {
+    "format": " {used:0.1f}GB",
+    "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB ({percentage}%)\nSwap: {swapUsed:0.1f}GB / {swapTotal:0.1f}GB",
+    "interval": 2,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+  "custom/notification": {
+    "format": "",
+    "on-click": "swaync-client -t",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/power-menu.sh"
+  }
+}

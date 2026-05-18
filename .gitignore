@@ -1,0 +1,39 @@
+# Private or machine-local data
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+id_*
+known_hosts
+authorized_keys
+
+# Secrets and runtime state
+*token*
+*secret*
+*password*
+*credential*
+cache/
+.cache/
+logs/
+*.log
+
+# Backups and generated files
+*.bak
+*.backup
+*backup*
+*.tmp
+*.swp
+current_wallpaper
+
+# Do not publish network credentials
+*wifi*
+*vpn*
+NetworkManager/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

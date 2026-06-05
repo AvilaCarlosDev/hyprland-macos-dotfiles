@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=LinkedIn: inicio de sesión o registro
+Exec=env GTK_THEME=WhiteSur-Dark brave --profile-directory=Default --app-id=eljhianlbceffjbgobligfjngmeheood
+Icon=brave-eljhianlbceffjbgobligfjngmeheood-Default
+StartupWMClass=crx_eljhianlbceffjbgobligfjngmeheood

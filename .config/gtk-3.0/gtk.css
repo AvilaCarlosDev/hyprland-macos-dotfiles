@@ -29,13 +29,17 @@ button.titlebutton:hover image,
 
 button.titlebutton.close,
 .titlebutton.close {
+  background: #ff5f57;
   background-color: #ff5f57;
+  background-image: none;
   border-color: #e0443e;
 }
 
 button.titlebutton.minimize,
 .titlebutton.minimize {
+  background: #ffbd2e;
   background-color: #ffbd2e;
+  background-image: none;
   border-color: #dea123;
 }
 
@@ -43,12 +47,50 @@ button.titlebutton.maximize,
 button.titlebutton.restore,
 .titlebutton.maximize,
 .titlebutton.restore {
+  background: #28c840;
   background-color: #28c840;
+  background-image: none;
   border-color: #1faa35;
 }
 
 button.titlebutton:backdrop,
 .titlebutton:backdrop {
+  background: #6f7378;
   background-color: #6f7378;
+  background-image: none;
   border-color: #5d6166;
+}
+
+headerbar button.titlebutton.close,
+headerbar windowcontrols button.close,
+.default-decoration button.titlebutton.close,
+.default-decoration windowcontrols button.close {
+  background: #ff5f57;
+  background-color: #ff5f57;
+  background-image: none;
+  border-color: #e0443e;
+}
+
+headerbar button.titlebutton.minimize,
+headerbar windowcontrols button.minimize,
+.default-decoration button.titlebutton.minimize,
+.default-decoration windowcontrols button.minimize {
+  background: #ffbd2e;
+  background-color: #ffbd2e;
+  background-image: none;
+  border-color: #dea123;
+}
+
+headerbar button.titlebutton.maximize,
+headerbar button.titlebutton.restore,
+headerbar windowcontrols button.maximize,
+headerbar windowcontrols button.restore,
+.default-decoration button.titlebutton.maximize,
+.default-decoration button.titlebutton.restore,
+.default-decoration windowcontrols button.maximize,
+.default-decoration windowcontrols button.restore {
+  background: #28c840;
+  background-color: #28c840;
+  background-image: none;
+  border-color: #1faa35;
 }

@@ -33,14 +33,18 @@ button.titlebutton:hover image,
 windowcontrols button.close,
 button.titlebutton.close,
 .titlebutton.close {
+  background: #ff5f57;
   background-color: #ff5f57;
+  background-image: none;
   border-color: #e0443e;
 }
 
 windowcontrols button.minimize,
 button.titlebutton.minimize,
 .titlebutton.minimize {
+  background: #ffbd2e;
   background-color: #ffbd2e;
+  background-image: none;
   border-color: #dea123;
 }
 
@@ -50,13 +54,51 @@ button.titlebutton.maximize,
 button.titlebutton.restore,
 .titlebutton.maximize,
 .titlebutton.restore {
+  background: #28c840;
   background-color: #28c840;
+  background-image: none;
   border-color: #1faa35;
 }
 
 windowcontrols button:backdrop,
 button.titlebutton:backdrop,
 .titlebutton:backdrop {
+  background: #6f7378;
   background-color: #6f7378;
+  background-image: none;
   border-color: #5d6166;
+}
+
+headerbar windowcontrols button.close,
+headerbar.titlebar windowcontrols button.close,
+headerbar.default-decoration windowcontrols button.close,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.close {
+  background: #ff5f57;
+  background-color: #ff5f57;
+  background-image: none;
+  border-color: #e0443e;
+}
+
+headerbar windowcontrols button.minimize,
+headerbar.titlebar windowcontrols button.minimize,
+headerbar.default-decoration windowcontrols button.minimize,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.minimize {
+  background: #ffbd2e;
+  background-color: #ffbd2e;
+  background-image: none;
+  border-color: #dea123;
+}
+
+headerbar windowcontrols button.maximize,
+headerbar windowcontrols button.restore,
+headerbar.titlebar windowcontrols button.maximize,
+headerbar.titlebar windowcontrols button.restore,
+headerbar.default-decoration windowcontrols button.maximize,
+headerbar.default-decoration windowcontrols button.restore,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.maximize,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.restore {
+  background: #28c840;
+  background-color: #28c840;
+  background-image: none;
+  border-color: #1faa35;
 }

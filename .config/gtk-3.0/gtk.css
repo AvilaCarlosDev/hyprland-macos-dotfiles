@@ -1,0 +1,54 @@
+/* macOS-style traffic-light window controls for GTK 3 apps.
+ * Keep app/workspace icons untouched; this only styles window buttons.
+ */
+
+button.titlebutton,
+.titlebutton {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  margin: 0 4px;
+  border-radius: 999px;
+  border: 1px solid alpha(#000000, 0.28);
+  background-image: none;
+  box-shadow: inset 0 1px alpha(#ffffff, 0.35);
+  color: transparent;
+  -gtk-icon-shadow: none;
+}
+
+button.titlebutton image,
+.titlebutton image {
+  color: transparent;
+  -gtk-icon-shadow: none;
+}
+
+button.titlebutton:hover image,
+.titlebutton:hover image {
+  color: alpha(#000000, 0.68);
+}
+
+button.titlebutton.close,
+.titlebutton.close {
+  background-color: #ff5f57;
+  border-color: #e0443e;
+}
+
+button.titlebutton.minimize,
+.titlebutton.minimize {
+  background-color: #ffbd2e;
+  border-color: #dea123;
+}
+
+button.titlebutton.maximize,
+button.titlebutton.restore,
+.titlebutton.maximize,
+.titlebutton.restore {
+  background-color: #28c840;
+  border-color: #1faa35;
+}
+
+button.titlebutton:backdrop,
+.titlebutton:backdrop {
+  background-color: #6f7378;
+  border-color: #5d6166;
+}

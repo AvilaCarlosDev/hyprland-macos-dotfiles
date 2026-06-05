@@ -1,0 +1,62 @@
+/* macOS-style traffic-light window controls for GTK 4/libadwaita apps.
+ * Keep app/workspace icons untouched; this only styles window buttons.
+ */
+
+windowcontrols button,
+button.titlebutton,
+.titlebutton {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  margin: 0 4px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, black 28%, transparent);
+  background-image: none;
+  box-shadow: inset 0 1px color-mix(in srgb, white 35%, transparent);
+  color: transparent;
+  -gtk-icon-shadow: none;
+}
+
+windowcontrols button image,
+button.titlebutton image,
+.titlebutton image {
+  color: transparent;
+  -gtk-icon-shadow: none;
+}
+
+windowcontrols button:hover image,
+button.titlebutton:hover image,
+.titlebutton:hover image {
+  color: color-mix(in srgb, black 68%, transparent);
+}
+
+windowcontrols button.close,
+button.titlebutton.close,
+.titlebutton.close {
+  background-color: #ff5f57;
+  border-color: #e0443e;
+}
+
+windowcontrols button.minimize,
+button.titlebutton.minimize,
+.titlebutton.minimize {
+  background-color: #ffbd2e;
+  border-color: #dea123;
+}
+
+windowcontrols button.maximize,
+windowcontrols button.restore,
+button.titlebutton.maximize,
+button.titlebutton.restore,
+.titlebutton.maximize,
+.titlebutton.restore {
+  background-color: #28c840;
+  border-color: #1faa35;
+}
+
+windowcontrols button:backdrop,
+button.titlebutton:backdrop,
+.titlebutton:backdrop {
+  background-color: #6f7378;
+  border-color: #5d6166;
+}

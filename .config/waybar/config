@@ -49,7 +49,17 @@
     "format": "{class}",
     "max-length": 35,
     "rewrite": {
-      "^(?!.*\\S).*": "Escritorio"
+      "^(?!.*\\S).*": "Escritorio",
+      "^brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default$": "WhatsApp",
+      "^crx_hnpfjngllnobngcgfapefoaidbinmjnm$": "WhatsApp",
+      "^brave-magkoliahgffibhgfkmoealggombgknl-Default$": "Discord",
+      "^crx_magkoliahgffibhgfkmoealggombgknl$": "Discord",
+      "^brave-comkdlimbkhemidbbpchhepidbmjpnhh-Default$": "Twitch",
+      "^crx_comkdlimbkhemidbbpchhepidbmjpnhh$": "Twitch",
+      "^brave-eljhianlbceffjbgobligfjngmeheood-Default$": "LinkedIn",
+      "^crx_eljhianlbceffjbgobligfjngmeheood$": "LinkedIn",
+      "^brave-hjlhbeffadgkonmpnblkfmhckmocohah-Default$": "Crunchyroll",
+      "^crx_hjlhbeffadgkonmpnblkfmhckmocohah$": "Crunchyroll"
     }
   },
   "clock": {

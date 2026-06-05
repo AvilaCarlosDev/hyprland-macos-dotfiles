@@ -59,7 +59,8 @@
       "^brave-eljhianlbceffjbgobligfjngmeheood-Default$": "LinkedIn",
       "^crx_eljhianlbceffjbgobligfjngmeheood$": "LinkedIn",
       "^brave-hjlhbeffadgkonmpnblkfmhckmocohah-Default$": "Crunchyroll",
-      "^crx_hjlhbeffadgkonmpnblkfmhckmocohah$": "Crunchyroll"
+      "^crx_hjlhbeffadgkonmpnblkfmhckmocohah$": "Crunchyroll",
+      "^brave-web\\.whatsapp\\.com__-Default$": "WhatsApp"
     }
   },
   "clock": {

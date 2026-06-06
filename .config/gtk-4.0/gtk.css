@@ -4,71 +4,47 @@
 
 windowcontrols button,
 button.titlebutton,
-.titlebutton {
-  min-width: 12px;
-  min-height: 12px;
+.titlebutton,
+headerbar windowcontrols button,
+headerbar.titlebar windowcontrols button,
+headerbar.default-decoration windowcontrols button,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton {
+  min-width: 14px;
+  min-height: 14px;
+  width: 14px;
+  height: 14px;
   padding: 0;
   margin: 0 4px;
-  border-radius: 999px;
+  border-radius: 50%;
   border: 1px solid color-mix(in srgb, black 28%, transparent);
   background-image: none;
   box-shadow: inset 0 1px color-mix(in srgb, white 35%, transparent);
   color: transparent;
   -gtk-icon-shadow: none;
+  opacity: 1;
 }
 
 windowcontrols button image,
 button.titlebutton image,
-.titlebutton image {
+.titlebutton image,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton image {
+  min-width: 10px;
+  min-height: 10px;
+  padding: 0;
   color: transparent;
   -gtk-icon-shadow: none;
 }
 
 windowcontrols button:hover image,
 button.titlebutton:hover image,
-.titlebutton:hover image {
+.titlebutton:hover image,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton:hover image {
   color: color-mix(in srgb, black 68%, transparent);
 }
 
 windowcontrols button.close,
 button.titlebutton.close,
-.titlebutton.close {
-  background: #ff5f57;
-  background-color: #ff5f57;
-  background-image: none;
-  border-color: #e0443e;
-}
-
-windowcontrols button.minimize,
-button.titlebutton.minimize,
-.titlebutton.minimize {
-  background: #ffbd2e;
-  background-color: #ffbd2e;
-  background-image: none;
-  border-color: #dea123;
-}
-
-windowcontrols button.maximize,
-windowcontrols button.restore,
-button.titlebutton.maximize,
-button.titlebutton.restore,
-.titlebutton.maximize,
-.titlebutton.restore {
-  background: #28c840;
-  background-color: #28c840;
-  background-image: none;
-  border-color: #1faa35;
-}
-
-windowcontrols button:backdrop,
-button.titlebutton:backdrop,
-.titlebutton:backdrop {
-  background: #6f7378;
-  background-color: #6f7378;
-  background-image: none;
-  border-color: #5d6166;
-}
-
+.titlebutton.close,
 headerbar windowcontrols button.close,
 headerbar.titlebar windowcontrols button.close,
 headerbar.default-decoration windowcontrols button.close,
@@ -77,18 +53,43 @@ window.background.chromium headerbar.header-bar.titlebar button.titlebutton.clos
   background-color: #ff5f57;
   background-image: none;
   border-color: #e0443e;
+  opacity: 1;
 }
 
+windowcontrols button.minimize,
+windowcontrols button.minimize:disabled,
+windowcontrols button.minimize:backdrop,
+button.titlebutton.minimize,
+button.titlebutton.minimize:disabled,
+button.titlebutton.minimize:backdrop,
+.titlebutton.minimize,
+.titlebutton.minimize:disabled,
+.titlebutton.minimize:backdrop,
 headerbar windowcontrols button.minimize,
+headerbar windowcontrols button.minimize:disabled,
+headerbar windowcontrols button.minimize:backdrop,
 headerbar.titlebar windowcontrols button.minimize,
+headerbar.titlebar windowcontrols button.minimize:disabled,
+headerbar.titlebar windowcontrols button.minimize:backdrop,
 headerbar.default-decoration windowcontrols button.minimize,
-window.background.chromium headerbar.header-bar.titlebar button.titlebutton.minimize {
+headerbar.default-decoration windowcontrols button.minimize:disabled,
+headerbar.default-decoration windowcontrols button.minimize:backdrop,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.minimize,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.minimize:disabled,
+window.background.chromium headerbar.header-bar.titlebar button.titlebutton.minimize:backdrop {
   background: #ffbd2e;
   background-color: #ffbd2e;
   background-image: none;
   border-color: #dea123;
+  opacity: 1;
 }
 
+windowcontrols button.maximize,
+windowcontrols button.restore,
+button.titlebutton.maximize,
+button.titlebutton.restore,
+.titlebutton.maximize,
+.titlebutton.restore,
 headerbar windowcontrols button.maximize,
 headerbar windowcontrols button.restore,
 headerbar.titlebar windowcontrols button.maximize,
@@ -101,4 +102,12 @@ window.background.chromium headerbar.header-bar.titlebar button.titlebutton.rest
   background-color: #28c840;
   background-image: none;
   border-color: #1faa35;
+  opacity: 1;
 }
+
+windowcontrols button:disabled image,
+button.titlebutton:disabled image,
+.titlebutton:disabled image {
+  color: transparent;
+}
+

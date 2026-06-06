@@ -1,5 +1,7 @@
 /* macOS-style traffic-light window controls for GTK 3 apps.
  * Keep app/workspace icons untouched; this only styles window buttons.
+ * The visible circles are fixed-size SVGs, centered so wide GTK buttons
+ * cannot stretch into ovals.
  */
 
 button.titlebutton,
@@ -8,16 +10,17 @@ headerbar button.titlebutton,
 headerbar windowcontrols button,
 .default-decoration button.titlebutton,
 .default-decoration windowcontrols button {
-  min-width: 14px;
-  min-height: 14px;
-  width: 14px;
-  height: 14px;
+  min-width: 18px;
+  min-height: 18px;
   padding: 0;
-  margin: 0 4px;
-  border-radius: 50%;
-  border: 1px solid alpha(#000000, 0.28);
-  background-image: none;
-  box-shadow: inset 0 1px alpha(#ffffff, 0.35);
+  margin: 0 3px;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  box-shadow: none;
   color: transparent;
   -gtk-icon-shadow: none;
   opacity: 1;
@@ -27,18 +30,12 @@ button.titlebutton image,
 .titlebutton image,
 headerbar windowcontrols button image,
 .default-decoration windowcontrols button image {
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 16px;
+  min-height: 16px;
   padding: 0;
   color: transparent;
+  opacity: 0;
   -gtk-icon-shadow: none;
-}
-
-button.titlebutton:hover image,
-.titlebutton:hover image,
-headerbar windowcontrols button:hover image,
-.default-decoration windowcontrols button:hover image {
-  color: alpha(#000000, 0.68);
 }
 
 button.titlebutton.close,
@@ -47,11 +44,25 @@ headerbar button.titlebutton.close,
 headerbar windowcontrols button.close,
 .default-decoration button.titlebutton.close,
 .default-decoration windowcontrols button.close {
-  background: #ff5f57;
-  background-color: #ff5f57;
-  background-image: none;
-  border-color: #e0443e;
-  opacity: 1;
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-close.svg");
+}
+
+button.titlebutton.close:hover,
+.titlebutton.close:hover,
+headerbar button.titlebutton.close:hover,
+headerbar windowcontrols button.close:hover,
+.default-decoration button.titlebutton.close:hover,
+.default-decoration windowcontrols button.close:hover {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-close-hover.svg");
+}
+
+button.titlebutton.close:active,
+.titlebutton.close:active,
+headerbar button.titlebutton.close:active,
+headerbar windowcontrols button.close:active,
+.default-decoration button.titlebutton.close:active,
+.default-decoration windowcontrols button.close:active {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-close-active.svg");
 }
 
 button.titlebutton.minimize,
@@ -72,11 +83,26 @@ headerbar windowcontrols button.minimize:backdrop,
 .default-decoration windowcontrols button.minimize,
 .default-decoration windowcontrols button.minimize:disabled,
 .default-decoration windowcontrols button.minimize:backdrop {
-  background: #ffbd2e;
-  background-color: #ffbd2e;
-  background-image: none;
-  border-color: #dea123;
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-minimize.svg");
   opacity: 1;
+}
+
+button.titlebutton.minimize:hover,
+.titlebutton.minimize:hover,
+headerbar button.titlebutton.minimize:hover,
+headerbar windowcontrols button.minimize:hover,
+.default-decoration button.titlebutton.minimize:hover,
+.default-decoration windowcontrols button.minimize:hover {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-minimize-hover.svg");
+}
+
+button.titlebutton.minimize:active,
+.titlebutton.minimize:active,
+headerbar button.titlebutton.minimize:active,
+headerbar windowcontrols button.minimize:active,
+.default-decoration button.titlebutton.minimize:active,
+.default-decoration windowcontrols button.minimize:active {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-minimize-active.svg");
 }
 
 button.titlebutton.maximize,
@@ -91,17 +117,36 @@ headerbar windowcontrols button.restore,
 .default-decoration button.titlebutton.restore,
 .default-decoration windowcontrols button.maximize,
 .default-decoration windowcontrols button.restore {
-  background: #28c840;
-  background-color: #28c840;
-  background-image: none;
-  border-color: #1faa35;
-  opacity: 1;
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-maximize.svg");
 }
 
-button.titlebutton:disabled image,
-.titlebutton:disabled image,
-headerbar windowcontrols button:disabled image,
-.default-decoration windowcontrols button:disabled image {
-  color: transparent;
+button.titlebutton.maximize:hover,
+button.titlebutton.restore:hover,
+.titlebutton.maximize:hover,
+.titlebutton.restore:hover,
+headerbar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.restore:hover,
+headerbar windowcontrols button.maximize:hover,
+headerbar windowcontrols button.restore:hover,
+.default-decoration button.titlebutton.maximize:hover,
+.default-decoration button.titlebutton.restore:hover,
+.default-decoration windowcontrols button.maximize:hover,
+.default-decoration windowcontrols button.restore:hover {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-maximize-hover.svg");
+}
+
+button.titlebutton.maximize:active,
+button.titlebutton.restore:active,
+.titlebutton.maximize:active,
+.titlebutton.restore:active,
+headerbar button.titlebutton.maximize:active,
+headerbar button.titlebutton.restore:active,
+headerbar windowcontrols button.maximize:active,
+headerbar windowcontrols button.restore:active,
+.default-decoration button.titlebutton.maximize:active,
+.default-decoration button.titlebutton.restore:active,
+.default-decoration windowcontrols button.maximize:active,
+.default-decoration windowcontrols button.restore:active {
+  background-image: url("/home/carlosdev/.themes/WhiteSur-Dark/metacity-1/titlebuttons/titlebutton-maximize-active.svg");
 }
 

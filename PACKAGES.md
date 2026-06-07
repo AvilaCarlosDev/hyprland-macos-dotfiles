@@ -19,8 +19,10 @@ sudo pacman -S --needed \
   curl \
   brightnessctl \
   pavucontrol \
+  networkmanager \
   network-manager-applet \
   polkit-gnome \
+  desktop-file-utils \
   kitty \
   nautilus \
   papirus-icon-theme \

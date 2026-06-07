@@ -123,7 +123,8 @@
     "tooltip-format-wifi": "<b>{essid}</b>  ·  {signalStrength}%\nIP\t{ipaddr}\nGateway\t{gwaddr}\n↓ {bandwidthDownBytes}\t↑ {bandwidthUpBytes}",
     "tooltip-format-ethernet": "<b>{ifname}</b>  ·  Cableado\nIP\t{ipaddr}\nGateway\t{gwaddr}\n↓ {bandwidthDownBytes}\t↑ {bandwidthUpBytes}",
     "tooltip-format-disconnected": "Desconectado",
-    "on-click": "nm-connection-editor",
+    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+    "on-click-right": "nm-connection-editor",
     "interval": 2
   },
   "pulseaudio": {

@@ -8,6 +8,8 @@ Configuracion publica para Arch Linux + Hyprland con un estilo tipo macOS:
 - Menus de bateria y apagado con wofi.
 - Selector de wallpaper.
 - Modulo de clima para Waybar usando wttr.in.
+- Menu Wi-Fi clickeable con `nmcli` y `wofi`/`rofi`.
+- Overrides `.desktop` publicos para ocultar gestores de archivos duplicados del launcher.
 
 ## Capturas
 
@@ -18,7 +20,7 @@ Agrega aqui tus screenshots cuando quieras publicar el repositorio.
 Paquetes principales en Arch:
 
 ```sh
-sudo pacman -S --needed hyprland waybar wofi rofi nwg-drawer nwg-dock-hyprland swaybg swaync hyprlock wl-clipboard cliphist jq curl brightnessctl pavucontrol network-manager-applet polkit-gnome
+sudo pacman -S --needed hyprland waybar wofi rofi nwg-drawer nwg-dock-hyprland swaybg swaync hyprlock wl-clipboard cliphist jq curl brightnessctl pavucontrol networkmanager network-manager-applet polkit-gnome desktop-file-utils
 ```
 
 Opcionales:
@@ -38,6 +40,8 @@ Clona el repo y ejecuta:
 ```
 
 El instalador hace backup de tus configs actuales antes de copiar estas.
+
+Tambien instala overrides en `~/.local/share/applications` para dejar Nautilus/Archivos como gestor de archivos visible y ocultar Nemo, Thunar y Dolphin del launcher.
 
 ## Clima
 
@@ -60,6 +64,7 @@ Este repo esta pensado para ser publico. No debe contener:
 - tokens o API keys
 - archivos .env
 - configuraciones de WiFi/VPN
+- accesos `.desktop` personales de navegadores o web apps
 - caches, logs o historiales
 - backups completos del home
 
